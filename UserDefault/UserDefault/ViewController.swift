@@ -30,6 +30,12 @@ class ViewController: UIViewController {
         print(value)
         print(str!)
         
+        UserDefaults.standard.set("https://fluffy.es", forKey: "homepage")
+        UserDefaults.standard.set(false, forKey: "darkmode")
+        
+        let library_path = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0]
+        
+        print("library path is \(library_path)")
         // Do any additional setup after loading the view, typically from a nib.
     }
     
